@@ -1,6 +1,6 @@
 body {border:; width:; height:;}
 
-{/* hide css */
+/* hide css */
 @media screen and (max-width:768px){
 .xs-hidden {display:none;width:0px; height:0px;border:0px;}
 }
