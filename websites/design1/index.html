@@ -30,7 +30,7 @@ body {display:block; margin:0; font-family:sans-serif;}
 
 .bg1 {background-image:url("bg1.png"); background-position:center; background-repeat:no-repeat; height:100vh; background-size:100vh 100hw; border:0px solid; position:fixed; top:0; width:100%; z-index:-2;}
 
-.header {height:100px; width:100%; background-color:rgba(30, 45, 59, 1); position:fixed; top:0;}
+.header {height:100px; width:100%; background-color:rgba(30, 45, 59, 1); position:fixed; top:0; }
 .nav {text-transform:uppercase; color:white; float:right; padding:30px;}
 .nav>li {display:inline-block; font-size:16px; padding-right:20px;}
 .show {display:block;}
@@ -45,6 +45,11 @@ body {display:block; margin:0; font-family:sans-serif;}
 .coname {letter-spacing: 0.05em;font-size:23px; padding:15px 20px;}
 .coname1 {font-weight:bold;}
 .coname2 {}
+@media screen and (max-width:768px){
+.logo {width:300px; }
+.logo>img {padding:10px 15px;}
+.coname {padding:10px 5px;}
+}
 
 .leaders {color:#FFFFFF; font-size:; max-width:700px; text-align:center; margin:auto; font: normal normal normal 60px/1.4em avenir-lt-w01_85-heavy1475544, sans-serif; line-height:1.1em; margin-top:150px; margin-bottom:70vh;}
 @media screen and (max-width:768px){
@@ -53,8 +58,8 @@ body {display:block; margin:0; font-family:sans-serif;}
 
 .headings {text-align:center; font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif; color: #C6C6C6; text-transform:uppercase;    font-weight: bold; letter-spacing: 0.05em; padding-top:30px; padding-bottom:10px;}
 .headingsbar {height:9px;width:130px; background-color:orange; margin:auto; padding:; margin-bottom:20px;}
-.services {height:; background-color:white;}
-.servicesbody {width:1000px; margin:auto;border:0;}
+.services {height:; background-color:white; width:100%;}
+.servicesbody {width:100%; margin:auto;border:0;}
 .servicesbody>.col-sm-4 {border:; overflow:hidden; background-color:#f7f7f7; margin:20px 10px 100px 10px; padding:0; width:31.2%; height:550px;}
 .serviceshead {color: #3D5975;font: normal normal normal 22px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;font-weight: bold;line-height: 1.6em; padding:10px 30px;}
 .servicestext {font: normal normal normal 15px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif; color: #3B3A3A; line-height: 1.6em; padding:0px 30px 30px 30px;}
@@ -109,8 +114,8 @@ body {display:block; margin:0; font-family:sans-serif;}
 
 <body>
 
-<div class="bg1 xs-visible sm-visible"></div>
-<video autoplay muted loop class="myVideo sm-hidden xs-hidden" id="home">
+<div class="bg1 xs-visible"></div>
+<video autoplay muted loop class="myVideo xs-hidden" id="home">
 <source src="file.mp4" type="video/mp4">
 Your browser does not support HTML5 video.
 </video>
