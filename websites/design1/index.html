@@ -26,9 +26,10 @@
 
 
 body {display:block; margin:0; font-family:sans-serif;}
-.myVideo{position:fixed; top:0; left:0; height:; width:100%; z-index:-1;}
 
-.bg1 {background-image:url("bg1.png"); background-position:center; background-repeat:no-repeat; height:100vh; background-size:100vh 100hw; border:0px solid; position:fixed; top:0; width:100%; z-index:-2;}
+.myVideo{position:fixed; top:0; left:0; height:120%; width:; z-index:-1; margin-left:; margin-top:-5%;}
+
+.bg1 {background-image:url("bg1.png"); background-position:center; background-repeat:no-repeat; height:100vh; background-size:100vh 100hw; border:0px solid; position:fixed; top:0; width:100%; z-index:-2; overflow:hidden;}
 
 .header {height:100px; width:100%; background-color:rgba(30, 45, 59, 1); position:fixed; top:0; }
 .nav {text-transform:uppercase; color:white; float:right; padding:30px;}
@@ -114,11 +115,12 @@ body {display:block; margin:0; font-family:sans-serif;}
 
 <body>
 
-<div class="bg1 xs-visible"></div>
+<div class="bg1">
 <video autoplay muted loop class="myVideo xs-hidden" id="home">
 <source src="file.mp4" type="video/mp4">
 Your browser does not support HTML5 video.
 </video>
+</div>
 
 <div class="header">
 
