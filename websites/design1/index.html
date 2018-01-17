@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MUSAB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+ <link rel="stylesheet" href="purecss.css">
+ <link rel="icon" href="" type="image/gif" sizes="16x16">
+
+<style>
+/* menubar */
+.menuholder{width:50px;height:30px;float:right;margin:25px 15px 0 0;}
+.menu{height:22px;width:50px;}
+.linebar {border-radius: 2px;height:4px;width:40px;background-color:#ee6e12;}
+.linebar:nth-child(1) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(2) {margin-bottom:5px;transition: .5s;}
+.linebar:nth-child(3) {transition: .5s;}
+.menuon{height:30px;width:40px;}
+.menuon>.linebar {margin-left:-5px;margin-right:-10px;}
+.menuon>.linebar:nth-child(1) {transform: rotate(130deg);margin-top:13px;margin-bottom:-5px;}
+.menuon>.linebar:nth-child(2) {opacity: 0;}
+.menuon>.linebar:nth-child(3) {transform: rotate(-130deg);margin-top:-8px;}
+
+
+
+
+body {display:block; margin:0; font-family:sans-serif;}
+.myVideo{position:fixed; top:0; left:0; height:; width:100%; z-index:-1;}
+
+.bg1 {background-image:url("bg1.png"); background-position:center; background-repeat:no-repeat; height:100vh; background-size:100vh 100hw; border:0px solid; position:fixed; top:0; width:100%; z-index:-2;}
+
+.header {height:100px; width:100%; background-color:rgba(30, 45, 59, 1); position:fixed; top:0;}
+.nav {text-transform:uppercase; color:white; float:right; padding:30px;}
+.nav>li {display:inline-block; font-size:16px; padding-right:20px;}
+.show {display:block;}
+@media screen and (max-width:768px){
+.nav {float:; height:100vh; width:100%; border:0px solid; background-color:orange; padding:0; margin:0;}
+.nav>li {display:block; padding:30px 0px; margin-left:40%;}
+}
+
+
+.logo {color:black; float:left; background-color:rgba(237, 205, 31, 1); height:100%; width:350px; }
+.logo>img {float:left; padding:15px 20px;}
+.coname {letter-spacing: 0.05em;font-size:23px; padding:15px 20px;}
+.coname1 {font-weight:bold;}
+.coname2 {}
+
+.leaders {color:#FFFFFF; font-size:; max-width:700px; text-align:center; margin:auto; font: normal normal normal 60px/1.4em avenir-lt-w01_85-heavy1475544, sans-serif; line-height:1.1em; margin-top:150px; margin-bottom:70vh;}
+@media screen and (max-width:768px){
+.leaders {font-size:30px;}
+}
+
+.headings {text-align:center; font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif; color: #C6C6C6; text-transform:uppercase;    font-weight: bold; letter-spacing: 0.05em; padding-top:30px; padding-bottom:10px;}
+.headingsbar {height:9px;width:130px; background-color:orange; margin:auto; padding:; margin-bottom:20px;}
+.services {height:; background-color:white;}
+.servicesbody {width:1000px; margin:auto;border:0;}
+.servicesbody>.col-sm-4 {border:; overflow:hidden; background-color:#f7f7f7; margin:20px 10px 100px 10px; padding:0; width:31.2%; height:550px;}
+.serviceshead {color: #3D5975;font: normal normal normal 22px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif;font-weight: bold;line-height: 1.6em; padding:10px 30px;}
+.servicestext {font: normal normal normal 15px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif; color: #3B3A3A; line-height: 1.6em; padding:0px 30px 30px 30px;}
+.servicesbody>.col-sm-4>img {width:100%; display:block; height:auto;}
+@media screen and (max-width:768px){
+.servicesbody {width:100%;}
+.servicesbody>.col-sm-4 {width:90%; margin:20px; height:auto;}
+}
+
+
+
+.about {}
+.about>.container {border:0;}
+.aboutside {background-color:#f7f7f7; overflow:hidden;}
+.abouttext {width:65%; float:right;}
+.bg2 {background-image:url("bg2.webp"); background-position:center; background-repeat:no-repeat; background-attachment:fixed;}
+.bg2>.col-sm-6 {min-height:350px;}
+.aboutdata {border:0; background-color:orange; height:150px; padding:; margin:0; text-align:center; overflow:hidden;}
+@media screen and (max-width:992px){
+.aboutdata {height:300px;}
+}
+.aboutdata>li {display:inline-block; padding:20px; }
+.aboutdatahead {font: normal normal normal 55px/1.4em avenir-lt-w01_85-heavy1475544,sans-serif; color:white;font-weight: bold; letter-spacing: 0.05em;}
+.aboutdatatext {font: normal normal normal 15px/1.4em helvetica-w01-light,helvetica-w02-light,sans-serif; color: #3B3A3A; line-height: 1.6em;}
+
+
+
+.projects {background-color:white; overflow:hidden;}
+.projectscontain {margin:auto; width:70%; border:;}
+.projectscontain>img {width:45%; padding:20px;}
+
+
+.clients {background-color:#f7f7f7;}
+.clientscontain {margin:auto; width:90%;}
+.clientscontain>img {width:; padding:20px;}
+
+.contact {background-color:white;}
+.maps {width:80%; height:450px; frameborder:0; border:0; margin:auto; display:block;}
+.contact2 {width:80%; margin:auto; border:0;}
+.inquiry {color:#1E2D3B; font-size:30px; font-weight:bold; margin:20px;}
+.inquirytext {margin:20px;}
+
+#name, #email, #subject, #message {width:100%; border-radius:4px; margin:4px 0; padding:6px 10px; box-sizing:border-box;}
+#message {height:150px;}
+#submit {width:80px; border-radius:4px; height:40px; background-color:rgba(30, 45, 59, 1);color: #FFFFFF;}
+.footer { margin:auto; width:80%; text-align:center; border:; height:100px;}
+.footer>div {float:left;padding:30px 0px;}
+.footer>img {float:right;padding:20px 0px;}
+
+</style>
+</head>
+
+<body>
+
+<div class="bg1 xs-visible sm-visible"></div>
+<video autoplay muted loop class="myVideo sm-hidden xs-hidden" id="home">
+<source src="file.mp4" type="video/mp4">
+Your browser does not support HTML5 video.
+</video>
+
+<div class="header">
+
+<div class="logo">
+<img src="logosample.png"/>
+<div class="coname">
+<div class="coname1">SPHERE</div>
+<div class="coname2">CONSTRUCTION</div>
+</div>
+</div>
+
+
+
+<div onclick='button()' id="menutoggle" class="bg">
+<div class='menuholder xs-visible sm-visible'>
+<div class='menu' id='menubars'>
+<div class='linebar'></div>
+<div class='linebar'></div>
+<div class='linebar'></div>
+</div>
+</div>
+</div>
+
+<ul id="nav" class="nav sm-hidden xs-hidden">
+<li onclick="smoothScroll(document.getElementById('home'))">home</li>
+<li onclick="smoothScroll(document.getElementById('services'))">services</li>
+<li onclick="smoothScroll(document.getElementById('about'))">about</li>
+<li onclick="smoothScroll(document.getElementById('projects'))">projects</li>
+<li onclick="smoothScroll(document.getElementById('contact'))">contact</li>
+</ul>
+
+</div>
+
+<div class="leaders">LEADERS IN QUALITY CONSTRUCTION AND INFRASTRUCTURE</div>
+
+<div class="services" id="services">
+<div class="headings">Services</div>
+<div class="headingsbar"></div>
+
+<div class="container servicesbody">
+<div class="col-sm-4">
+<img src="services1.webp"/>
+<div class="serviceshead">Preconstruction Planning</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
+</div>
+<div class="col-sm-4">
+<img src="services2.webp"/>
+<div class="serviceshead">Architectural Modelling</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
+</div>
+<div class="col-sm-4">
+<img src="services3.webp"/>
+<div class="serviceshead">Construction Management</div>
+<div class="servicestext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font.</div>
+</div>
+</div>	
+
+</div>
+
+
+
+<div class="about" id="about">
+
+<div class="container bg2">
+<div class="col-sm-6 aboutside">
+<div class="headings">ABOUT</div>
+<div class="headingsbar"></div>
+<div class="servicestext abouttext">I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. Feel free to drag and drop me anywhere you like on your page. I’m a great place for you to tell a story and let your users know a little more about you.​This is a great space to write long text about your company and your services. You can use this space to go into a little more detail about your company. Talk about your team and what services you provide. Tell your visitors the story of how you came up with the idea for your business and what makes you different from your competitors. Make your company stand out and show your visitors who you are.</div>
+</div>
+<div class="col-sm-6"></div>
+</div>
+
+
+<ul class="aboutdata">
+<li>
+<div class="aboutdatahead">2023</div>
+<div class="aboutdatatext">Year Established</div>
+</li>
+<li>
+<div class="aboutdatahead">206</div>
+<div class="aboutdatatext">Projects Completed</div>
+</li>
+<li>
+<div class="aboutdatahead">870</div>
+<div class="aboutdatatext">Contractors Appointed</div>
+</li>
+<li>
+<div class="aboutdatahead">26</div>
+<div class="aboutdatatext">Awards Won</div>
+</li>
+<ul>
+
+
+</div>
+
+
+<div class="projects" id="projects">
+<div class="headings">PROJECTS</div>
+<div class="headingsbar"></div>
+
+<div class="projectscontain">
+<img src="project1.webp">
+<img src="project2.webp">
+<img src="project3.webp">
+<img src="project4.webp">
+</div>
+
+</div>
+
+
+<div class="clients">
+<div class="headings">CLIENTS</div>
+<div class="headingsbar"></div>
+
+<div class="clientscontain">
+<img src="logo1.png"/>
+<img src="logo2.png"/>
+<img src="logo1.png"/>
+<img src="logo2.png"/>
+<img src="logo1.png"/>
+<img src="logo2.png"/>
+</div>
+
+</div>
+
+
+<div class="contact" id="contact">
+<div class="headings">Contact</div>
+<div class="headingsbar"></div>
+<iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d865.7812315372092!2d77.6146066825085!3d13.021283516913085!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x6f8114c1e096f11!2sMasjid-e-Akbari!5e0!3m2!1sen!2sin!4v1516112725847"  allowfullscreen></iframe>
+
+
+
+<div class="container contact2">
+
+<div class="col-sm-6">
+<div class="inquiry">Inquiries</div>
+<div class="inquirytext">For any inquiries, questions or commendations, please call: 123-456-7890 or fill out the following form</div>
+<form action="/action_page.php">
+<input type="text" id="name" name="name" placeholder="Your name..">
+<input type="text" id="email" name="email" placeholder="Your email..">
+<input type="text" id="subject" name="subject" placeholder="subject..">
+<input type="text" id="message" name="message" placeholder="your message..">
+<input id="submit" type="submit" value="Submit">
+</form>
+
+</div>
+
+<div class="col-sm-6">
+<div class="inquiry">Head Office</div>
+<div class="inquirytext">500 Terry Francois Street</div>
+<div class="inquirytext">San Francisco, CA 94158</div>
+
+<div class="inquirytext">info@mysite.com</div>
+<div class="inquirytext">Tel: 123-456-7890</div>
+<div class="inquirytext">Fax: 123-456-7890</div>
+
+<div class="inquiry">Employment</div>
+<div class="inquirytext">To apply for a job with Sphere Constuctions, please send a cover letter together with your C.V. to: info@mysite.com</div>
+<div class="headingsbar"></div>
+<div class="inquirytext">Get a quote: 123-456-7890</div>
+</div>
+
+</div>
+
+<div class="footer">
+<div>© 2023 by Sphere Construction. Proudly created with Msb.com</div>
+
+<img src="s1.png">
+<img src="s2.png">
+<img src="s3.png">
+</div>
+
+</div>
+
+<script>
+
+window.smoothScroll = function(target) {
+    var scrollContainer = target;
+    do { //find scroll container
+        scrollContainer = scrollContainer.parentNode;
+        if (!scrollContainer) return;
+        scrollContainer.scrollTop += 1;
+    } while (scrollContainer.scrollTop == 0);
+    
+    var targetY = -100;
+    do { //find the top of target relatively to the container
+        if (target == scrollContainer) break;
+        targetY += target.offsetTop;
+    } while (target = target.offsetParent);
+    
+    scroll = function(c, a, b, i) {
+        i++; if (i > 30) return;
+        c.scrollTop = a + (b - a) / 30 * i;
+        setTimeout(function(){ scroll(c, a, b, i); }, 20);
+    }
+    // start scrolling
+    scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
+
+
+button();
+
+}
+
+var press=0;
+function button() {
+if (press == 1){console.log("1");press=0;
+document.getElementById('menubars').classList.remove('menuon');
+document.getElementById('menubars').classList.add('menu');
+document.getElementById('nav').classList.remove('show');
+}
+else {console.log("2");press=1;
+document.getElementById('menubars').classList.remove('menu');
+document.getElementById('menubars').classList.add('menuon');
+document.getElementById('nav').classList.add('show');
+}
+}
+
+
+</script>
+</body>
+</html>
